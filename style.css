@@ -1,0 +1,100 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.blinkingCursor{
+    /* text-decoration: overline; */
+    animation: blink 0.3s linear infinite;
+
+}
+
+.blinking{
+    animation: blink .3s infinite;
+
+}
+@keyframes blink{
+    /* 0%{
+        opacity: 0.1;
+    }100%{
+        opacity: 1;
+    } */
+     0%{
+        border-color: rgba(128, 128, 128, 0);
+     }100%{
+        border-color: orange;
+     }
+}
+.techBox-parent{
+    gap: .5rem;
+}
+.techBox{
+    height: 9rem;
+    width: 9rem;
+}
+@media screen and (max-width:480px) {
+    .techBox{
+        height: 4rem;
+        width: 4rem;
+    }
+    
+}
+@media screen and (max-width:740px) {
+    .techBox{
+        height: 6rem;
+        width: 6rem;
+    }
+    
+}
+.skilsArray{
+    gap: .5rem;
+}
+.skilsArray img{
+    /* border: 2px solid green; */
+    height: 100%;
+    /* width: 100%; */
+    /* aspect-ratio: 3/3; */
+    /* height: 2rem;
+    width: 2rem; */
+    /* height: 100px; */
+    /* width: 150px; */
+}
+.prow-menu a:hover{
+    border-bottom: 1px solid orangered;
+}
+.wraper{
+    position: relative;
+    perspective: 1000px;
+    border: 2px solid blueviolet;
+
+}
+.flipCard{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+.wraper:hover .flipCard{
+    transform: rotateY(180deg);
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    border: 2px 0 0 2px solid greenyellow;
+    box-shadow: 0 5px 10px orange;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.frontCard{
+    height: 100%;
+}.backCard{
+    height: 100%;
+}
